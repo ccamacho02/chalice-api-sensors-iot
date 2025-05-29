@@ -15,7 +15,7 @@ class SensorRepository:
             cursor = conn.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
             cursor.execute(
-                """SELECT id_sensor, nombre_sensor, tipo_sensor, ubicacion_sensor, estado_sensor, fecha_creacion
+                """SELECT id_sensor, id_zona, nombre_sensor, tipo_sensor, ubicacion_sensor, estado_sensor, fecha_creacion
                 FROM sensores
                 ORDER BY fecha_creacion DESC;"""
             )

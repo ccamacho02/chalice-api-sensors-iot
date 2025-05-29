@@ -5,10 +5,10 @@ from typing import Optional
 
 @dataclass
 class Sensor:
-    id: Optional[int] = None
     id_zona: int
+    id: Optional[int] = None
     nombre_sensor: str = ""
     tipo_sensor: str = ""
     ubicacion_sensor: str = ""
-    estado_sensor: str = "activo"
+    estado_sensor: str = "active"
     fecha_creacion: Optional[datetime] = None
