@@ -1,0 +1,21 @@
+sensorAPI/.chalice/deployments/
+sensorAPI/.chalice/deployed/
+sensorAPI/.chalice/venv/
+sensorAPI/.chalice/config.json
+
+# Entornos virtuales
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Archivos de entorno
+.env
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs (opcional)
+*.log
