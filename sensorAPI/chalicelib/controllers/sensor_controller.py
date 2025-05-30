@@ -1,6 +1,6 @@
 import logging
-from src.services.sensor_service import SensorService
-from src.utils.response_helper import ResponseHelper
+from chalicelib.services.sensor_service import SensorService
+from chalicelib.utils.response_helper import ResponseHelper
 
 
 logger = logging.getLogger(__name__)

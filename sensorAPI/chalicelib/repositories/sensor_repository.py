@@ -1,8 +1,8 @@
 import psycopg2.extras
 import logging
 from typing import List
-from src.utils.database import DatabaseConnection
-from src.models.sensor import Sensor
+from chalicelib.utils.database import DatabaseConnection
+from chalicelib.models.sensor import Sensor
 
 logger = logging.getLogger(__name__)
 

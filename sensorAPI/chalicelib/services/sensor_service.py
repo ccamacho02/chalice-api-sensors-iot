@@ -1,7 +1,7 @@
 import logging
 from typing import Dict
-from src.models.sensor import Sensor
-from src.repositories.sensor_repository import SensorRepository
+from chalicelib.models.sensor import Sensor
+from chalicelib.repositories.sensor_repository import SensorRepository
 
 
 logger = logging.getLogger(__name__)

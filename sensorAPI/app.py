@@ -1,5 +1,5 @@
 from chalice import Chalice
-from src.controllers.sensor_controller import SensorController
+from chalicelib.controllers.sensor_controller import SensorController
 
 app = Chalice(app_name="sensorAPI")
 
