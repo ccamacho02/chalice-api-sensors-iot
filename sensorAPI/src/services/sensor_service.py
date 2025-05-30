@@ -56,3 +56,24 @@ class SensorService:
         except Exception as e:
             logger.error(f"Error al crear sensor: {e}")
             raise
+
+    def get_sensor_events(self, sensor_id: int) -> Dict:
+        try:
+            if not sensor_id:
+                raise ValueError("No se proporcionó el ID del sensor.")
+
+            eventos = self.sensor_repository.get_sensor_events(sensor_id)
+
+            eventos_recientes = sorted(
+                eventos, key=lambda x: x["fecha_creacion"], reverse=True
+            )
+
+            return {
+                "sensor_id": sensor_id,
+                "events": eventos_recientes,
+                "total_count": len(eventos_recientes),
+            }
+
+        except Exception as e:
+            logger.error(f"Error al obtener eventos del sensor {sensor_id}: {e}")
+            raise

@@ -42,3 +42,16 @@ class SensorController:
         except Exception as e:
             logger.error(f"Error al crear sensor: {e}")
             return self.response_helper.error_response(str(e))
+
+    def get_sensor_events(self, sensor_id: int):
+        try:
+            datos_eventos = self.sensor_service.get_sensor_events(sensor_id)
+            return self.response_helper.success_response(
+                datos_eventos, "Eventos del sensor obtenidos correctamente."
+            )
+
+        except ValueError as ve:
+            return self.response_helper.error_response(str(ve), status_code=400)
+        except Exception as e:
+            logger.error(f"Error al obtener eventos del sensor {sensor_id}: {e}")
+            return self.response_helper.error_response(str(e))
